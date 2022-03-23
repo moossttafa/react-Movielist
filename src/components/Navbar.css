@@ -48,6 +48,7 @@
     list-style: none;
     text-align: center;
     justify-content: end;
+    margin: 0;
   }
   
   .nav-item {
@@ -81,22 +82,25 @@
   @media screen and (max-width: 960px) {
     .NavbarItems {
       position: relative;
-    }
-  
-    .nav-menu {
+    } 
+    .menu{
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
-      position: absolute;
+      /* height: 90vh; */ 
       top: 80px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
       margin-top: 0px;
+      height: 100%;
+      position: fixed;
+    }
+    .nav-menu {
+      flex-direction: column;
     }
   
-    .nav-menu.active {
+    .menu.active {
       background: #1c2237;
       left: 0;
       opacity: 1;
